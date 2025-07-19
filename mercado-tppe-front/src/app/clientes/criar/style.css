@@ -1,0 +1,255 @@
+/* src/app/clientes/criar/style.css */
+
+
+/* Reset básico para box-sizing */
+
+.create-client-page-container,
+.create-client-page-container * {
+    box-sizing: border-box;
+}
+
+.create-client-page-container {
+    background: #ffffff;
+    height: 1412px;
+    /* Ajuste conforme necessário, pois o conteúdo pode variar */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Container principal do formulário */
+
+.create-client-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 1140px;
+    max-width: 90%;
+    margin-top: 44px;
+}
+
+
+/* Headline / Título da página */
+
+.create-client-headline-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 48px;
+}
+
+.create-client-title {
+    color: #1c1c1c;
+    text-align: left;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* Container dos campos do formulário */
+
+.client-form-fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* Box de texto genérico (contém label e input/textarea) */
+
+.form-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* Label do formulário */
+
+.form-label {
+    text-align: left;
+    font-family: "Roboto-SemiBold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+.form-label .required-star {
+    color: #b6922e;
+    margin-left: 4px;
+}
+
+
+/* Área do input/textarea */
+
+.form-input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* Estilo para inputs e textareas */
+
+.form-input-field {
+    background: #f0f9ff;
+    border-radius: 10px;
+    padding: 8px 16px;
+    width: 100%;
+    height: 63px;
+    /* Mantém a altura uniforme */
+    border: 1px solid #e0e0e0;
+    font-family: "Roboto-Italic", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(51, 51, 51, 0.65);
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-input-field:focus {
+    border-color: #3b82f6;
+}
+
+
+/* Mensagens de feedback (sucesso/erro) */
+
+.form-message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Botões de Ação */
+
+.form-buttons-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.primary-large-button,
+.secondary-large-button {
+    border-radius: 44px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    border: none;
+}
+
+.primary-large-button {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.primary-large-button:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.secondary-large-button {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.secondary-large-button:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.primary-large-button:disabled,
+.secondary-large-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-text {
+    color: inherit;
+}
+
+.edit-button {
+    background-color: #2563eb;
+    /* Remove o fundo padrão do botão */
+    border: none;
+    /* Remove a borda padrão do botão */
+    padding: 0;
+    /* Remove o padding padrão do botão */
+    cursor: pointer;
+    /* Indica que é clicável */
+    display: flex;
+    /* Para alinhar o ícone dentro se necessário */
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in-out;
+    /* Transição suave no hover */
+}
+
+.edit-button:hover {
+    opacity: 0.7;
+    /* Escurece um pouco no hover */
+}
+
+.edit-button:active {
+    opacity: 0.5;
+    /* Escurece mais no click */
+}
+
+.edit-icon {
+    width: 24px;
+    color: #2563eb;
+    /* Ou o tamanho que você já tem para seu ícone */
+    height: 24px;
+    /* Se você já tem estilos para .edit, pode manter aqui */
+}
+
+
+/* Se você tinha estilos no .frame-6250242 que afetavam o clique visual, revise-os */
+
+.frame-6250242 {
+    /* Mantenha apenas o que é para layout do container */
+    display: flex;
+    /* Exemplo: se for um container de flex */
+    align-items: center;
+    justify-content: center;
+    /* etc. */
+}

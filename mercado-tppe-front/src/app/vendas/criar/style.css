@@ -1,0 +1,233 @@
+/* src/app/vendas/criar/style.css */
+
+
+/* Reset básico para box-sizing */
+
+.create-venda-page-container,
+.create-venda-page-container * {
+    box-sizing: border-box;
+}
+
+.create-venda-page-container {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Container principal do formulário */
+
+.create-venda-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 1140px;
+    max-width: 90%;
+    margin-top: 44px;
+}
+
+
+/* Headline / Título da página */
+
+.create-venda-headline-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 48px;
+}
+
+.create-venda-title {
+    color: #1c1c1c;
+    text-align: left;
+    font-family: "Roboto-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* Container dos campos do formulário */
+
+.venda-form-fields-container {
+    /* Nome da classe específico para vendas */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* Box de texto genérico (contém label e input/textarea/select) */
+
+.form-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* Label do formulário */
+
+.form-label {
+    text-align: left;
+    font-family: "Roboto-SemiBold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+.form-label .required-star {
+    color: #b6922e;
+    margin-left: 4px;
+}
+
+
+/* Área do input/textarea/select */
+
+.form-input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+
+/* Estilo para inputs, textareas e agora selects */
+
+.form-input-field {
+    background: #f0f9ff;
+    border-radius: 10px;
+    padding: 8px 16px;
+    width: 100%;
+    height: 63px;
+    /* Mantém a altura uniforme */
+    border: 1px solid #e0e0e0;
+    font-family: "Roboto-Italic", sans-serif;
+    /* Para placeholders/opções não selecionadas */
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(51, 51, 51, 0.65);
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+    appearance: none;
+    /* Remove a seta padrão do select em alguns navegadores */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    /* Seta customizada */
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+.form-input-field:focus {
+    border-color: #3b82f6;
+}
+
+
+/* Estilo para o campo select */
+
+.form-input-field.select-field {
+    font-style: normal;
+    /* Remove itálico para o texto das opções selecionadas */
+    color: #333;
+    /* Cor mais escura para o texto selecionado */
+}
+
+
+/* Mensagens de feedback (sucesso/erro) */
+
+.form-message {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.loading-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+    color: #1e3a8a;
+    font-family: "Roboto-Medium", sans-serif;
+}
+
+
+/* Botões de Ação */
+
+.form-buttons-group {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.primary-large-button,
+.secondary-large-button {
+    border-radius: 44px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    border: none;
+}
+
+.primary-large-button {
+    background: #3b82f6;
+    color: #ffffff;
+}
+
+.primary-large-button:hover:not(:disabled) {
+    background-color: #2563eb;
+}
+
+.secondary-large-button {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.secondary-large-button:hover:not(:disabled) {
+    background-color: #dc2626;
+}
+
+.primary-large-button:disabled,
+.secondary-large-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-text {
+    color: inherit;
+}

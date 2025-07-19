@@ -1,0 +1,821 @@
+/* src/app/vendas/sales.css */
+
+.sales-page-container,
+.sales-page-container * {
+    box-sizing: border-box;
+}
+
+.sales-page-container {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+/* --- Seção: Título, Pesquisa e Botão Cadastrar Venda --- */
+
+.sales-header-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 1200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    max-width: 95%;
+}
+
+.sales-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 209px;
+    position: relative;
+}
+
+.sales-page-title {
+    color: #1c1c1c;
+    text-align: center;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sales-base-subtitle {
+    color: #159354;
+    text-align: center;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.sales-search-button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.sales-search-input-wrapper {
+    flex-shrink: 0;
+    width: 276.69px;
+    height: 38px;
+    position: relative;
+}
+
+.sales-search-input {
+    background: #f0f9ff;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: #4caf50;
+    border-width: 1px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px 10px 45px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    outline: none;
+}
+
+.sales-search-icon {
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 9.83px;
+    top: 7px;
+    overflow: visible;
+    z-index: 1;
+}
+
+.sales-add-button {
+    background: #3b82f6;
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 232px;
+    height: 38px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sales-add-button:hover {
+    background-color: #2563eb;
+}
+
+.sales-add-button-text {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+
+/* --- Seção da Tabela de Vendas --- */
+
+.sales-table-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1200px;
+    margin-top: 20px;
+    padding: 0 20px;
+    max-width: 95%;
+}
+
+
+/* Cabeçalho da Tabela de Vendas */
+
+.sales-table-header-row {
+    border-radius: 12px 12px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+
+/* Células do Cabeçalho da Tabela de VENDAS (7 COLUNAS) */
+
+.sale-id-header-cell,
+.sale-client-cpf-header-cell,
+.sale-seller-cpf-header-cell,
+.sale-product-id-header-cell,
+.sale-quantity-header-cell,
+.sale-total-value-header-cell,
+.sale-actions-header-cell {
+    background: #d1fae5;
+    border-style: solid;
+    border-color: #4caf50;
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 114px;
+    position: relative;
+}
+
+
+/* Larguras para as células do cabeçalho de VENDAS (7 colunas) */
+
+.sale-id-header-cell {
+    width: 80px;
+}
+
+.sale-client-cpf-header-cell {
+    width: 180px;
+}
+
+.sale-seller-cpf-header-cell {
+    width: 180px;
+}
+
+.sale-product-id-header-cell {
+    width: 120px;
+}
+
+.sale-quantity-header-cell {
+    width: 120px;
+}
+
+.sale-total-value-header-cell {
+    width: 200px;
+}
+
+.sale-actions-header-cell {
+    width: 220px;
+}
+
+
+/* Arredondamento dos cantos do cabeçalho de VENDAS */
+
+.sale-id-header-cell {
+    border-radius: 12px 0px 0px 0px;
+}
+
+.sale-actions-header-cell {
+    border-radius: 0px 12px 0px 0px;
+}
+
+
+/* Remover borda direita da última célula do cabeçalho de VENDAS */
+
+.sales-table-header-row>div:last-child {
+    border-right: none;
+}
+
+
+/* Estilos de texto para cabeçalhos de VENDAS */
+
+.sale-id-text,
+.sale-client-cpf-text,
+.sale-seller-cpf-text,
+.sale-product-id-text,
+.sale-quantity-text,
+.sale-total-value-text,
+.sale-actions-text {
+    color: #159354;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+/* Centraliza alguns textos do cabeçalho de VENDAS */
+
+.sale-id-text,
+.sale-client-cpf-text,
+.sale-seller-cpf-text,
+.sale-product-id-text,
+.sale-quantity-text,
+.sale-total-value-text {
+    text-align: center;
+}
+
+
+/* Linhas da Tabela (dados dinâmicos) de VENDAS */
+
+.sale-data-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+
+/* Estilos para alternar cores de fundo das linhas de VENDAS */
+
+.sale-row-even .sale-id-data-cell,
+.sale-row-even .sale-client-cpf-data-cell,
+.sale-row-even .sale-seller-cpf-data-cell,
+.sale-row-even .sale-product-id-data-cell,
+.sale-row-even .sale-quantity-data-cell,
+.sale-row-even .sale-total-value-data-cell,
+.sale-row-even .sale-actions-data-cell {
+    background: #f0f9ff;
+    /* Cor de fundo para linhas pares */
+}
+
+.sale-row-odd .sale-id-data-cell,
+.sale-row-odd .sale-client-cpf-data-cell,
+.sale-row-odd .sale-seller-cpf-data-cell,
+.sale-row-odd .sale-product-id-data-cell,
+.sale-row-odd .sale-quantity-data-cell,
+.sale-row-odd .sale-total-value-data-cell,
+.sale-row-odd .sale-actions-data-cell {
+    background: #ffffff;
+    /* Cor de fundo para linhas ímpares */
+}
+
+
+/* Células de Dados de VENDAS */
+
+.sale-id-data-cell,
+.sale-client-cpf-data-cell,
+.sale-seller-cpf-data-cell,
+.sale-product-id-data-cell,
+.sale-quantity-data-cell,
+.sale-total-value-data-cell,
+.sale-actions-data-cell {
+    border-style: solid;
+    border-color: #4caf50;
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 114px;
+    position: relative;
+}
+
+
+/* Larguras para as células de dados de VENDAS */
+
+.sale-id-data-cell {
+    width: 80px;
+}
+
+.sale-client-cpf-data-cell {
+    width: 180px;
+}
+
+.sale-seller-cpf-data-cell {
+    width: 180px;
+}
+
+.sale-product-id-data-cell {
+    width: 120px;
+}
+
+.sale-quantity-data-cell {
+    width: 120px;
+}
+
+.sale-total-value-data-cell {
+    width: 200px;
+}
+
+.sale-actions-data-cell {
+    width: 220px;
+}
+
+
+/* Arredondamento dos cantos das células de dados na última linha de VENDAS */
+
+.sales-table-section>.sale-data-row:last-child .sale-id-data-cell {
+    border-radius: 0px 0px 0px 12px;
+}
+
+.sales-table-section>.sale-data-row:last-child .sale-actions-data-cell {
+    border-radius: 0px 0px 12px 0px;
+}
+
+
+/* Remover borda direita da última célula de cada linha de VENDAS */
+
+.sale-data-row>div:last-child {
+    border-right: none;
+}
+
+
+/* Estilos de texto para células de dados de VENDAS */
+
+.sale-id-value,
+.sale-client-cpf-value,
+.sale-seller-cpf-value,
+.sale-product-id-value,
+.sale-quantity-value,
+.sale-total-value-value {
+    color: #159354;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+/* Centraliza alguns textos das células de dados de VENDAS */
+
+.sale-id-value,
+.sale-client-cpf-value,
+.sale-seller-cpf-value,
+.sale-product-id-value,
+.sale-quantity-value,
+.sale-total-value-value {
+    text-align: center;
+}
+
+
+/* --- NOVOS ESTILOS PARA OS BOTÕES DE AÇÃO (DELETAR) --- */
+
+
+/* Estas classes são usadas no seu JSX para o botão de deletar */
+
+.product-delete-button-wrapper {
+    /* Este é o wrapper da "bola" vermelha */
+    background: #ef4444;
+    /* Cor de fundo vermelha */
+    border-radius: 50%;
+    /* Torna-o um círculo perfeito */
+    border: none;
+    /* Remove bordas que possam atrapalhar */
+    padding: 0;
+    /* Remove padding interno do wrapper */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza o ícone */
+    flex-shrink: 0;
+    width: 40px;
+    /* Largura para a bola */
+    height: 40px;
+    /* Altura para a bola */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    overflow: hidden;
+    /* Garante que nada saia do círculo */
+}
+
+
+/* Efeito de hover para o wrapper da bola */
+
+.product-delete-button-wrapper:hover {
+    background-color: #dc2626;
+    /* Um vermelho um pouco mais escuro */
+}
+
+.product-action-button {
+    /* Este é o <button> transparente dentro da bola */
+    background: none;
+    /* Sem fundo */
+    border: none;
+    /* Sem borda */
+    padding: 0;
+    /* Sem padding */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* Ocupa 100% da largura do wrapper */
+    height: 100%;
+    /* Ocupa 100% da altura do wrapper */
+    outline: none;
+    /* Remove o contorno de foco padrão do navegador */
+    transition: opacity 0.2s ease-in-out;
+}
+
+.product-action-button:active {
+    opacity: 0.7;
+    /* Efeito ao clicar */
+}
+
+.product-action-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.product-delete-icon {
+    /* Este é o <img> do ícone da lixeira */
+    width: 20px;
+    /* Tamanho do ícone */
+    height: 20px;
+    /* Mantém a proporção */
+    display: block;
+    object-fit: contain;
+    /* !important pode ser removido se não houver conflitos, mas garante prioridade */
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    filter: none !important;
+}
+
+
+/* --- Mensagens de Estado (Carregando, Erro, Sem Resultados) --- */
+
+.sale-loading-message,
+.sale-error-message,
+.sale-no-results-message {
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+/* --- Estilos de Paginação --- */
+
+.sales-pagination-section {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sales-pagination-prev-button,
+.sales-pagination-next-button {
+    background: #d1fae5;
+    border-radius: 64px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.pagination-arrow-text {
+    color: #159354;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sales-pagination-page-button-active {
+    background: #159354;
+    border-radius: 64px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.pagination-page-number {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Roboto-Medium", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+}
+
+.sales-pagination-page-button {
+    background: #d1fae5;
+    border-radius: 64px;
+    border-style: solid;
+    border-color: #159354;
+    border-width: 1px;
+    padding: 8px 12px 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+
+/* --- Estilos do Modal de Confirmação --- */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.c-onfirma-cadastro-protudo {
+    background: var(--branco-amarelado, #f5f5ef);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #4caf50;
+    border-width: 2px;
+    padding: 8px 8px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.headline {
+    padding: 16px 16px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.t-tulo {
+    color: #4caf50;
+    text-align: left;
+    font-family: "Roboto-SemiBold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    flex: 1;
+}
+
+.frame-625011 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 464px;
+    max-width: 100%;
+    position: relative;
+}
+
+.erro-questao {
+    padding: 0px 16px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.frame-624944 {
+    padding: 0px 16px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.descri-o {
+    color: #1b1b1b;
+    text-align: left;
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    flex: 1;
+    text-overflow: ellipsis;
+}
+
+.botoes-apagar {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 464px;
+    max-width: 100%;
+    position: relative;
+}
+
+
+/* Botão "Cancelar" do modal */
+
+.frame-625012 {
+    background: none;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #333333;
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.frame-625012:hover {
+    background-color: #e0e0e0;
+    color: #1b1b1b;
+}
+
+.text {
+    color: #333333;
+    text-align: center;
+    font-family: "Roboto-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Botão "Confirmar Exclusão" (Vermelho) */
+
+.confirmar-deletar {
+    background: #ef4444;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #ef4444;
+    border-width: 1px;
+    padding: 8px 32px 8px 32px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.confirmar-deletar:hover {
+    background-color: #dc2626;
+    border-color: #dc2626;
+}
+
+
+/* Estilos para o texto dentro do botão de confirmação */
+
+.confirmar-deletar .text2 {
+    color: var(--branco, #ffffff);
+    text-align: center;
+    font-family: "Rawline-SemiBold", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Estilos para a mensagem de feedback dentro do modal (sucesso/erro) */
+
+.delete-message {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.delete-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.delete-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* Estilo para desabilitar botões enquanto está carregando */
+
+.frame-625012:disabled,
+.confirmar-deletar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* Para garantir que as imagens carreguem corretamente */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
